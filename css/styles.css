@@ -139,8 +139,8 @@ nav {
 
 .close {
  position: absolute;
- bottom: 1rem;
- right: 1.5rem;
+ bottom: 1.5rem;
+ right: 2.5rem;
 }
 
 .nav-item {
@@ -178,7 +178,7 @@ nav {
 }
 
 .main-message h3 {
- font-size: 4rem;
+ font-size: 2.5rem;
  margin: 1rem 0;
 }
 
@@ -192,11 +192,11 @@ nav {
 }
 
 .btn {
- background-color: var(--tuscan-red);
+ background-color: var(--carmine-pink);
  border-radius: 2rem;
  color: var(--cosmic-latte);
  display: inline-block;
- margin-top: 2rem;
+ margin-top: 3rem;
  padding: 1rem 2.5rem;
  text-transform: uppercase;
  transition: background-color 650ms;
@@ -269,13 +269,13 @@ nav {
 
 .prayer-grid-item h1 {
  font-size: 1.7rem;
- color: var(--cosmic-latte);
+ color: var(--raisin-black);
  text-transform: uppercase;
  margin: 2rem;
 }
 
 .prayer-grid-item p {
- color: var(--cosmic-latte);
+ color: var(--raisin-black);
 }
 
 
@@ -344,7 +344,120 @@ nav {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
  grid-gap: 2.5rem;
+ margin-bottom: 2rem;
 }
+
+.adventure-grid-item {
+ display: flex;
+ flex-direction: column;
+}
+
+.adventure-grid-item i {
+ text-align: center;
+ margin-bottom: 1rem;
+ font-size: 2rem;
+ color: var(--nav-purple);
+}
+
+.prayer-btn {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+}
+
+footer {
+ padding: 2rem 0;
+ background-color: var(--nav-purple);
+ color: var(--cosmic-latte);
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 350px) {
+ .main-message {}
+
+ .main-message h3 {
+  font-size: 4rem;
+  margin: 1rem 0;
+ }
+}
+
+@media screen and (min-width: 700px) {
+ header {
+  height: 8rem;
+ }
+
+ .main-message {
+  max-width: 90rem;
+  text-align: center;
+ }
+
+ .nav-brand {
+  width: 3rem;
+ }
+
+ .nav-list {
+  width: initial;
+  height: initial;
+  background-color: transparent;
+  position: initial;
+  top: 0;
+  right: initial;
+  flex-direction: row;
+  transition: initial;
+ }
+
+ .menu-icons {
+  display: none;
+ }
+
+ .nav-item {
+  margin: 0 2.5rem;
+ }
+
+ .nav-link,
+ .current {
+  color: var(--cosmic-latte);
+  position: relative;
+  font-size: 1.3rem;
+ }
+
+ .nav-link::before,
+ .current::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  background-color: var(--cosmic-latte);
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 650ms;
+ }
+
+ .current::before {
+  transform: scaleX(1);
+ }
+
+ .nav-link:hover::before {
+  transform: scaleX(1);
+ }
+
+ .hero {
+  height: 70vh;
+ }
+
+}
+
+
+@media screen and (min-width: 700px) {}
+
+
+
+
+
 
 
 
@@ -385,19 +498,17 @@ nav {
 }
 
 
-.book-title-heading {
- margin-bottom: 1.5rem;
- font-size: 1.3rem;
+.book-title-heading h1 {
+ margin-top: 1.5rem;
+ font-size: 2rem;
 }
 
 .book-title-heading i {
- font-size: 2rem;
+ font-size: 3rem;
  color: var(--nav-purple);
 }
 
-
-
-
+.prayer-btn {}
 
 /* Prayer Grid Images */
 
